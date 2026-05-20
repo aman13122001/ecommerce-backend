@@ -1,0 +1,11 @@
+package com.ecommerce.event;
+
+import io.quarkus.kafka.client.serialization.ObjectMapperDeserializer;
+
+public class OrderPlacedEventDeserializer
+        extends ObjectMapperDeserializer<OrderPlacedEvent> {
+
+    public OrderPlacedEventDeserializer() {
+        super(OrderPlacedEvent.class);
+    }
+}
